@@ -1,4 +1,4 @@
-# JH Essentials
+# JH Essentials V 0.2
 JH Essentials is a library containing many reusable code mainly meant for game development, but could be used in other projects too
 
 # License

@@ -1,7 +1,4 @@
-# JH Essentials Source
-The source files of the JH_Essentials library.
-
-# What is JH Essentials
+# What is JH Essentials?
 JH Essentials is a library containing many reusable code mainly meant for game development, but could be used in other projects too
 
 # License

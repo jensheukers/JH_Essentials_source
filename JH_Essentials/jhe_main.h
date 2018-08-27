@@ -1,5 +1,5 @@
 /**
-*	Filename: math.cpp
+*	Filename: jhe_main.h
 *
 *	Description: Main header file for jh_essentials.
 *	Version: 0.1

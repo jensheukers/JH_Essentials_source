@@ -10,6 +10,7 @@
 #pragma once
 #include "math\math.h"
 #include "vector2\vector2.h"
+#include "types\string.h"
 
 class Jhe {
 private:

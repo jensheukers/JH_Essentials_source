@@ -12,7 +12,7 @@
 class String {
 private:
 	char* data;
-	unsigned length;
+	int length;
 	
 public:
 	/**
@@ -23,7 +23,7 @@ public:
 	/**
 	* Returns the lenght of the string.
 	*/
-	unsigned GetLenght() { return this->length; };
+	int GetLenght() { return this->length; };
 
 	/**
 	*Returns the char at the index given.

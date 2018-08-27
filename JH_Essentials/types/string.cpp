@@ -13,11 +13,12 @@ String::String(const char* c) {
 	while (c[i] != '\0') {
 		i++;
 	}
-	length = i;
-	data = new char[length];
 
-	for (int ii = 0; ii < length; i++) {
-		data[ii] = c[ii];
+	this->length = i;
+	this->data = new char[length];
+
+	for (int ii = 0; ii < length; ii++) {
+		this->data[ii] = c[ii];
 	}
 }
 

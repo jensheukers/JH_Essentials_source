@@ -14,12 +14,34 @@ String::String(const char* c) {
 		i++;
 	}
 
-	this->length = i;
-	this->data = new char[length];
+	length = i;
+	data = new char[length];
 
 	for (int ii = 0; ii < length; ii++) {
-		this->data[ii] = c[ii];
+		data[ii] = c[ii];
 	}
+}
+
+void String::Append(const char* c) {
+	int i = 0;
+	while (c[i] != '\0') {
+		i++;
+	}
+
+	char* convertedChar = new char[length + i];
+
+	for (int ii = 0; ii < length; i++) {
+		convertedChar[ii] = data[ii];
+	}
+
+	for (int iii = length; iii < length + i; iii++) {
+		convertedChar[iii] = c[iii - length];
+	}
+
+	length = length + i;
+	data = convertedChar;
+
+	delete convertedChar;
 }
 
 char String::GetLetter(int index) {

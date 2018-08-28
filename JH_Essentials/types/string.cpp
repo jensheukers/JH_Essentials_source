@@ -22,26 +22,15 @@ String::String(const char* c) {
 	}
 }
 
-void String::Append(const char* c) {
-	int i = 0;
-	while (c[i] != '\0') {
-		i++;
+char* String::Get() {
+	char* returnString = new char[length];
+
+	for (int i = 0; i < length; i++) {
+		returnString[i] = GetLetter(i);
 	}
 
-	char* convertedChar = new char[length + i];
-
-	for (int ii = 0; ii < length; i++) {
-		convertedChar[ii] = data[ii];
-	}
-
-	for (int iii = length; iii < length + i; iii++) {
-		convertedChar[iii] = c[iii - length];
-	}
-
-	length = length + i;
-	data = convertedChar;
-
-	delete convertedChar;
+	returnString[length] = '\0';
+	return returnString;
 }
 
 char String::GetLetter(int index) {

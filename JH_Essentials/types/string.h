@@ -23,12 +23,7 @@ public:
 	/**
 	* Returns the string
 	*/
-	const char* Get() { return data; };
-
-	/**
-	* Appends parameter to the string
-	*/
-	void Append(const char* c);
+	char* Get();
 
 	/**
 	* Returns the lenght of the string.

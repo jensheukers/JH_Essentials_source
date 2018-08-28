@@ -1,3 +1,12 @@
+/**
+*	Filename: array.h
+*
+*	Description: Header for array data type
+*	Version: 0.3
+*
+*	© 2018, Jens Heukers
+*/
+
 #pragma once
 
 template<typename Type>
@@ -6,13 +15,22 @@ private:
 	unsigned size;
 	Type* elements;
 public:
+	/**
+	* Constructor
+	*/
 	Array() {
 		size = 0;
 		elements = new Type[size];
 	}
 
+	/**
+	* Returns the size of the array
+	*/
 	unsigned Size() { return this->size; };
 
+	/**
+	* Adds a new entry to the array
+	*/
 	void Add(Type element) {
 		size++;
 		Type* newArray = new Type[size];
@@ -25,6 +43,9 @@ public:
 		elements = newArray;
 	};
 
+	/**
+	* Removes a entry from the array
+	*/
 	void Remove(unsigned index) {
 		size--;
 		Type* newArray = new Type[size];
@@ -40,6 +61,9 @@ public:
 		elements = newArray;
 	};
 
+	/**
+	* Returns element with the index given as parameter
+	*/
 	Type* Get(unsigned index) {
 		return &elements[index];
 	}

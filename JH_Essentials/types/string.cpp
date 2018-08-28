@@ -38,6 +38,6 @@ char* String::Get() {
 	return returnString;
 }
 
-char String::GetLetter(int index) {
+char String::GetLetter(unsigned index) {
 	return data[index];
 }

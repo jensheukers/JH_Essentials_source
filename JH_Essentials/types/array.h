@@ -31,7 +31,7 @@ public:
 	/**
 	* Adds a new entry to the array
 	*/
-	void Add(Type element) {
+	void Push(Type element) {
 		size++;
 		Type* newArray = new Type[size];
 		

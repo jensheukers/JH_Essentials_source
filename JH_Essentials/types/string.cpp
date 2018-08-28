@@ -69,7 +69,7 @@ Array<String>* String::Split(const char* c) {
 			}
 			word[letterCount] = '\0';
 			lastWordIndex = i;
-			returnArray->Add(String(word));
+			returnArray->Push(String(word));
 		}
 		i++;
 	}

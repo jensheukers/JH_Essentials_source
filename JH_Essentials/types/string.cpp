@@ -62,6 +62,5 @@ Array<String>* String::Split(char* c) {
 		}
 		i++;
 	}
-
 	return returnArray;
 }

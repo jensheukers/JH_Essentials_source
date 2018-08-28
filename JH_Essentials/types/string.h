@@ -6,8 +6,8 @@
 *
 *	© 2018, Jens Heukers
 */
-
 #pragma once
+#include "jhe_main.h"
 
 class String {
 private:
@@ -39,4 +39,10 @@ public:
 	* Returns the char at the index given.
 	*/
 	char GetLetter(unsigned index);
+
+
+	/**
+	* Splits the string into multiple strings wherever a character equals c
+	*/
+	Array<String>* Split(char* c);
 };

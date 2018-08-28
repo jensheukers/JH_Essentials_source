@@ -9,9 +9,13 @@
 
 #pragma once
 #include "math\math.h"
+#include "types\array.h"
+
+#ifndef JHE_MAIN_H
+#define JHE_MAIN_H
+
 #include "vector2\vector2.h"
 #include "types\string.h"
-#include "types\array.h"
 
 class Jhe {
 private:
@@ -22,3 +26,5 @@ public:
 	*/
 	float GetVersion() { return this->VERSION; };
 };
+
+#endif // !JHE_MAIN_H

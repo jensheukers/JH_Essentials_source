@@ -41,3 +41,27 @@ char* String::Get() {
 char String::GetLetter(unsigned index) {
 	return data[index];
 }
+
+Array<String>* String::Split(char* c) {
+	Array<String>* returnArray = new Array<String>();
+	
+	int lastMatchIndex = 0;
+	int i = 0;
+
+	while (data[i] != '\0') {
+		if (data[i] == c[0]) {
+			char* currentWord = new char[i];
+
+			for (int ii = lastMatchIndex; ii < i; ii++) {
+				currentWord[ii] = data[ii];
+			}
+
+			lastMatchIndex = i;
+
+			returnArray->Add(String(currentWord));
+		}
+		i++;
+	}
+
+	return returnArray;
+}

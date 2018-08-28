@@ -42,7 +42,7 @@ public:
 
 
 	/**
-	* Splits the string into multiple strings wherever a character equals c
+	* Splits the string into multiple strings whenever a character equals c
 	*/
 	Array<String>* Split(char* c);
 };

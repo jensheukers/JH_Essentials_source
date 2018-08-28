@@ -41,6 +41,6 @@ public:
 	};
 
 	Type* Get(unsigned index) {
-		return elements[index];
+		return &elements[index];
 	}
 };

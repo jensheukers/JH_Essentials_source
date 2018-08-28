@@ -76,3 +76,20 @@ Array<String>* String::Split(const char* c) {
 
 	return returnArray;
 }
+
+void String::Append(String* other) {
+	char* appendedString = new char[this->length + other->length];
+	appendedString[this->length + other->length] = '\0';
+
+
+	for (int i = 0; i < this->length; i++) {
+		appendedString[i] = this->GetChar()[i];
+	}
+
+	for (int i = this->length; i < this->length + other->length; i++) {
+		appendedString[i] = other->GetChar()[i - this->length];
+	}
+
+	this->length = this->length + other->length;
+	this->data = appendedString;
+}

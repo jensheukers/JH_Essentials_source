@@ -40,9 +40,18 @@ public:
 	*/
 	char GetLetter(unsigned index);
 
+	/**
+	* Returns the char data
+	*/
+	char* GetChar() { return this->data; }
 
 	/**
 	* Splits the string into multiple strings whenever a character equals c
 	*/
 	Array<String>* Split(const char* c);
+
+	/**
+	* Appends the given string
+	*/
+	void Append(String* other);
 };

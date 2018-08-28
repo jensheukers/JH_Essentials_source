@@ -42,7 +42,7 @@ char String::GetLetter(unsigned index) {
 	return data[index];
 }
 
-Array<String>* String::Split(char* c) {
+Array<String>* String::Split(const char* c) {
 	Array<String>* returnArray = new Array<String>();
 	
 	int lastMatchIndex = 0;
@@ -60,6 +60,19 @@ Array<String>* String::Split(char* c) {
 
 			returnArray->Add(String(currentWord));
 		}
+
+		if (data[i + 1] == '\0') {
+			char* currentWord = new char[i + 1];
+
+			for (int ii = lastMatchIndex; ii < i + 1; ii++) {
+				currentWord[ii] = data[ii];
+			}
+
+			lastMatchIndex = i + 1;
+
+			returnArray->Add(String(currentWord));
+		}
+
 		i++;
 	}
 	return returnArray;

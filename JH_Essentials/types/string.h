@@ -44,5 +44,5 @@ public:
 	/**
 	* Splits the string into multiple strings whenever a character equals c
 	*/
-	Array<String>* Split(char* c);
+	Array<String>* Split(const char* c);
 };

@@ -49,13 +49,16 @@ Array<String>* String::Split(const char* c) {
 	unsigned lastWordIndex = 0;
 	bool finished = false;
 
+	data[length + 1] = '\0';
+	data[length] = c[0];
+
 	while (!finished) {
 
 		if (data[i] == '\0') {
 			finished = true;
 		}
 
-		if (data[i] == c[0] || data[i] == '\0') {
+		if (data[i] == c[0]) {
 			char* word = new char[i - lastWordIndex];
 			unsigned letterCount = 0;
 			for (int ii = 0; ii < i - lastWordIndex; ii++) {

@@ -8,6 +8,11 @@
 */
 #include "string.h"
 
+String::String() {
+	length = 0;
+	data = new char['\0'];
+}
+
 String::String(const char* c) {
 	int i = 0;
 	while (c[i] != '\0') {

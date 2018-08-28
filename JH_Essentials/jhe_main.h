@@ -11,6 +11,7 @@
 #include "math\math.h"
 #include "vector2\vector2.h"
 #include "types\string.h"
+#include "types\array.h"
 
 class Jhe {
 private:

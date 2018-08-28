@@ -44,36 +44,32 @@ char String::GetLetter(unsigned index) {
 
 Array<String>* String::Split(const char* c) {
 	Array<String>* returnArray = new Array<String>();
-	
-	int lastMatchIndex = 0;
-	int i = 0;
 
-	while (data[i] != '\0') {
-		if (data[i] == c[0]) {
-			char* currentWord = new char[i];
+	unsigned i = 0;
+	unsigned lastWordIndex = 0;
+	bool finished = false;
 
-			for (int ii = lastMatchIndex; ii < i; ii++) {
-				currentWord[ii] = data[ii];
-			}
+	while (!finished) {
 
-			lastMatchIndex = i;
-
-			returnArray->Add(String(currentWord));
+		if (data[i] == '\0') {
+			finished = true;
 		}
 
-		if (data[i + 1] == '\0') {
-			char* currentWord = new char[i + 1];
-
-			for (int ii = lastMatchIndex; ii < i + 1; ii++) {
-				currentWord[ii] = data[ii];
+		if (data[i] == c[0] || data[i] == '\0') {
+			char* word = new char[i - lastWordIndex];
+			unsigned letterCount = 0;
+			for (int ii = 0; ii < i - lastWordIndex; ii++) {
+				if (data[lastWordIndex + ii] != c[0]) {
+					word[letterCount] = data[lastWordIndex + ii];
+					letterCount++;
+				}
 			}
-
-			lastMatchIndex = i + 1;
-
-			returnArray->Add(String(currentWord));
+			word[letterCount] = '\0';
+			lastWordIndex = i;
+			returnArray->Add(String(word));
 		}
-
 		i++;
 	}
+
 	return returnArray;
 }

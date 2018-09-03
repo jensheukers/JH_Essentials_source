@@ -2,7 +2,7 @@
 *	Filename: string.h
 *
 *	Description: Header for string data type
-*	Version: 0.2
+*	Version: 0.6
 *
 *	© 2018, Jens Heukers
 */

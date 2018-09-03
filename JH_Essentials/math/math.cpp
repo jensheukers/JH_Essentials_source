@@ -2,7 +2,7 @@
 *	Filename: math.cpp
 *
 *	Description: Math class source file.
-*	Version: 0.2
+*	Version: 0.5
 *
 *	© 2018, Jens Heukers
 */

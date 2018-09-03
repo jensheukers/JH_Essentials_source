@@ -2,7 +2,7 @@
 *	Filename: math.h
 *
 *	Description: Math class for jh_essentials, containing basic math functionality, extending upon cmath.
-*	Version: 0.2
+*	Version: 0.5
 *
 *	© 2018, Jens Heukers
 */

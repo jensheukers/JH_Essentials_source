@@ -2,7 +2,7 @@
 *	Filename: vector2.h
 *
 *	Description: Vector2 Class header.
-*	Version: 0.5
+*	Version: 0.7
 *
 *	© 2018, Jens Heukers
 */

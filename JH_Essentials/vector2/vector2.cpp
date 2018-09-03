@@ -2,7 +2,7 @@
 *	Filename: vector2.cpp
 *
 *	Description: Vector2 source file.
-*	Version: 0.5
+*	Version: 0.7
 *
 *	© 2018, Jens Heukers
 */

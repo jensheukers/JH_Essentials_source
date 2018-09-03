@@ -2,12 +2,13 @@
 *	Filename: array.h
 *
 *	Description: Header for array data type
-*	Version: 0.3
+*	Version: 0.5
 *
 *	© 2018, Jens Heukers
 */
 
 #pragma once
+#include <stdexcept>
 
 template<typename Type>
 class Array {
@@ -65,6 +66,11 @@ public:
 	* Returns element with the index given as parameter
 	*/
 	Type* Get(unsigned index) {
-		return &elements[index];
+		if (index > this->size) {
+			throw std::out_of_range("Index out of range");
+		}
+		else {
+			return &elements[index];
+		}
 	}
 };

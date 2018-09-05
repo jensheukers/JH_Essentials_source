@@ -19,7 +19,7 @@
 
 class Jhe {
 private:
-	const float VERSION = 0.2;
+	const float VERSION = 0.3;
 public:
 	/**
 	* Returns the current version build
